@@ -6,6 +6,7 @@
 \usepackage[catalan]{babel}			% Catalan sections support
 \usepackage[hidelinks]{hyperref}	% Autoref support
 \usepackage{setspace}				% Allows to set a specific stretch
+\usepackage{float}
 
 \addto\captionscatalan{\renewcommand{\chaptername}{Pràctica}}
 
@@ -50,7 +51,7 @@
 
 \section{Proveta metà\l. lica }
 
-La \autoref{fig:traccio-metalica-grafic-proveta} correspon al resultat de l’assaig a tracció de la proveta metà\l.lica de 6 mm de diàmetre inicial, marcada amb separacions de 10 mm per estimar posteriorment paràmetres de ruptura. 
+La \autoref{fig:traccio-metalica-grafic-proveta} correspon al resultat de l'assaig a tracció de la proveta metà\l.lica de 6 mm de diàmetre inicial, marcada amb separacions de 10 mm per estimar posteriorment paràmetres de ruptura. 
 
 \begin{figure}[hb]
     \centering
@@ -59,26 +60,26 @@ La \autoref{fig:traccio-metalica-grafic-proveta} correspon al resultat de l’as
     \label{fig:traccio-metalica-grafic-proveta}
 \end{figure}
 
-Abans de concretar algunes qüestions sobre l’assaig, a priori ja es poden extreure algunes conclusions del únicament utilitzant el gràfic:
+Abans de concretar algunes qüestions sobre l'assaig, a priori ja es poden extreure algunes conclusions del únicament utilitzant el gràfic:
 \begin{itemize}
-    \item  S’ha produït la ruptura del material. Això ho poden notar amb la línia vertical final en el gràfic.
-    \item  La peça ha relliscat al principi, com queda indicat a la línia horitzontal inicial del gràfic. Aquest fenomen retarda l’aparició de la zona elàstica del material, caracteritzada per una zona de pendent constant, que es troba aproximadament entre els 4 mm i els 6,11 mm de desplaçament dels capçals de la màquina.
+    \item  S'ha produït la ruptura del material. Això ho poden notar amb la línia vertical final en el gràfic.
+    \item  La peça ha relliscat al principi, com queda indicat a la línia horitzontal inicial del gràfic. Aquest fenomen retarda l'aparició de la zona elàstica del material, caracteritzada per una zona de pendent constant, que es troba aproximadament entre els 4 mm i els 6,11 mm de desplaçament dels capçals de la màquina.
     \item  El material ha patit estricció. La zona de pendent negatiu indica que la secció del material està disminuint, doncs es necessita menys força per continuar deformant.
     \item  La ruptura és dúctil. Es pot corroborar analitzant la superfície de ruptura.
 \end{itemize}
 
 \subsection{El fenomen de l'estricció}
 
-Durant l’assaig a tracció, en superar el valor màxim de força, el material plastifica i comença a deformar apareixent un coll. Aquesta deformació axial genera una contracció radial que redueix la secció de la proveta. La màquina d’assaigs a tracció, aplica força per moure’s a velocitat constant, per tant, com la secció disminueix aplica menys força per continuar deformant a la mateixa velocitat, fins arribar a la fallida per ruptura de la peça.
+Durant l'assaig a tracció, en superar el valor màxim de força, el material plastifica i comença a deformar apareixent un coll. Aquesta deformació axial genera una contracció radial que redueix la secció de la proveta. La màquina d'assaigs a tracció, aplica força per moure's a velocitat constant, per tant, com la secció disminueix aplica menys força per continuar deformant a la mateixa velocitat, fins arribar a la fallida per ruptura de la peça.
 
-A la \autoref{fig:traccio-metalica-grafic-proveta} això es tradueix en una regió de pendent negativa entre el valor màxim de força i el moment de la fallida, tal com s’ha comentat al principi.
+A la \autoref{fig:traccio-metalica-grafic-proveta} això es tradueix en una regió de pendent negativa entre el valor màxim de força i el moment de la fallida, tal com s'ha comentat al principi.
 
 Com el material és crista\l.lí, el material no deforma gaire abans de trencar.
 
 \subsection{Morfologia de la fractura}
-Per estudiar la morfologia de la ruptura és essencial la fixar-se en la superfície de fractura. El primer que s’observa en una de les parts és un contorn ondulat que indica que el material ha deformat abans de trencar i per tant la ruptura és dúctil. Aquest contorn ondulat té major diàmetre que el diàmetre d’estricció màxima, per tant, es pot concloure que aquest fragment ha fallat per forces tangencials, abans de trencar definitivament.
+Per estudiar la morfologia de la ruptura és essencial la fixar-se en la superfície de fractura. El primer que s'observa en una de les parts és un contorn ondulat que indica que el material ha deformat abans de trencar i per tant la ruptura és dúctil. Aquest contorn ondulat té major diàmetre que el diàmetre d'estricció màxima, per tant, es pot concloure que aquest fragment ha fallat per forces tangencials, abans de trencar definitivament.
 
-Un altre indicador de ruptura dúctil és la rugositat de les superfícies, que s’observa a ull nu malgrat la contaminació d’aquestes. De tota manera, les peces encaixen amb relativa facilitat, per tant el material no deforma de manera considerable com els polímers, dels quals es parlarà més endavant.
+Un altre indicador de ruptura dúctil és la rugositat de les superfícies, que s'observa a ull nu malgrat la contaminació d'aquestes. De tota manera, les peces encaixen amb relativa facilitat, per tant el material no deforma de manera considerable com els polímers, dels quals es parlarà més endavant.
 
 Aquestes consideracions es veuen i\l.lustrades a la \autoref{fig:traccio-metalica-superficie-ruptura}, que és una fotografia de les dues superfícies de ruptura. 
 
@@ -93,18 +94,76 @@ Aquestes consideracions es veuen i\l.lustrades a la \autoref{fig:traccio-metalic
 
 Utilitzant les marques inicials de la proveta, les dimensions finals i el gràfic F-d, es poden obtenir els següents paràmetres: límit elàstic, càrrega màxima, allargament a la ruptura (\%) i estricció (\%).
 
-La càrrega màxima és una mesura directa del gràfic, sent el màxim valor d’aquesta. Mitjançant mètodes d’aproximació gràfica, s’ha estimat que aquest valor és $38,43 \ kN$.
+La càrrega màxima és una mesura directa del gràfic, sent el màxim valor d'aquesta. Mitjançant mètodes d'aproximació gràfica, s'ha estimat que aquest valor és $38,43 \ kN$.
 
 El límit elàstic real es defineix com el punt on el material comença a plastificar. El límit elàstic convencional tolera un $0,2\%$ de deformació. Aquests dos valors són representatius del valor del límit elàstic i es poden estimar sempre que es puguin mesurar les deformacions. 
 
-Donat que no es disposava d’extensòmetre es farà l’aproximació del valor del límit elàstic com el quocient entre el valor de força abans d’abandonar el règim elàstic entre l’àrea inicial. Aprofitant que les deformacions en la proveta metà\l.lica són reduïdes, s’ha considerat que és una estimació suficientment correcte.
+Donat que no es disposava d'extensòmetre es farà l'aproximació del valor del límit elàstic com el quocient entre el valor de força abans d'abandonar el règim elàstic entre l'àrea inicial. Aprofitant que les deformacions en la proveta metà\l.lica són reduïdes, s'ha considerat que és una estimació suficientment correcte.
 
-S’ha pres el valor de força (estimat també gràficament) de $28,50 \ kN$, el que suposa una tensió de límit elàstic de $1007,98 \ N/mm^2$. S’ha suposat que la secció de la proveta és perfectament circular.
+S'ha pres el valor de força (estimat també gràficament) de $28,50 \ kN$, el que suposa una tensió de límit elàstic de $1007,98 \ N/mm^2$. S'ha suposat que la secció de la proveta és perfectament circular.
 
-Quant a l’allargament a la ruptura, la distància entre les marques entre les quals s’ha produït la ruptura ha passat de $10 \ mm$ a $13,6 \ mm$, per tant, l’allargament és d’un $36\%$.
+Quant a l'allargament a la ruptura, la distància entre les marques entre les quals s'ha produït la ruptura ha passat de $10 \ mm$ a $13,6 \ mm$, per tant, l'allargament és d'un $36\%$.
 
-Per últim, el diàmetre final de la proveta, mesurada amb una precisió de $0,1 \ mm$ és de $5 \ mm$, per tant, l’estricció és d’un $30,56\%$.
+Per últim, el diàmetre final de la proveta, mesurada amb una precisió de $0,1 \ mm$ és de $5 \ mm$, per tant, l'estricció és d'un $30,56\%$.
+
+\chapter{Tractaments tèrmics}
+
+L'objectiu d'aquesta pràctica és determinar l'efecte de tres tractaments tèrmics en les propietats d'un acer F-1140 (0,45\% C, 0,65\% Mn, 0,25\% Si, ≤0,03\% P, ≤0,03\% S). 
+
+Es disposa de tres provetes d'aquest acer i cada una d'elles es sotmet a un tractament tèrmic: tremp, tremp i revingut a 600ºC o normalitzat. Posteriorment, se'n mesura la duresa (resistència del material a ser deformat plàsticament) mitjançant el duròmetre Hoytom (es prenen tres valors i es fa la mitjana) i la resiliència (energia de deformació elàstica que pot ser emmagatzemada per un cos) amb el pèndul Charpy. Els valors obtinguts per a cada proveta es recullen a la \autoref{tab:tract-assaigs}:
 
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|r|lrr|}
+		\hline
+		Proveta & Tractament tèrmic & Duresa  & Resiliència \\
+		\hline
+		1 & Tremp & 46,7 HRC & 0 $kg \cdot m$ \\
+		2 & Tremp i revingut a 600ºC & 79,3 HRB & 7,2 $kg \cdot m$ \\
+		3 & Normalitzat & 59,7 HRB & 3,8 $kg \cdot m$ \\
+		\hline
+	\end{tabular}
+	\caption{Resultats dels assaig de duresa i resiliència}
+	\label{tab:tract-assaigs}
+\end{table}
+
+\section{Tremp}
+La primera proveta es sotmet a un tremp en aigua des de la temperatura de 860ºC. Aquest tractament tèrmic és un mecanisme d'enduriment i implica un refredament molt ràpid i, per tant, fora de l'equilibri. L'estructura generada és la martensita: es tracta d'una solució sòlida sobresaturada en C en una xarxa tetragonal centrada en el cos (BCT). Així doncs, aquesta estructura distorsionada es genera fruït de la transformació adifusional de l'austenita i es caracteritza per una elevada duresa (50-70 HRC), resistència i fragilitat donat que reté moltes tensions internes. 
+
+\section{Tremp i revingut a 600ºC (Bonificat)}
+
+Tot i que el tremp proporciona una elevada duresa, el principal inconvenient és la també elevada fragilitat que l'acompanya, ja que la martensita és una estructura molt tensionada. Per tal que una peça trempada pugui tenir posteriors aplicacions, cal aplicar-li un tractament de revingut que elimini aquestes tensions. L'objectiu del revingut és, per tant, augmentar la tenacitat i disminuir la fragilitat, tot i que això implica que minvin la duresa i la resistència. L'operació, que com s'ha dit es realitza immediatament després d'un tremp, consisteix en escalfar el' material durant un temps determinat a una temperatura inferior a la d'austenització. 
+
+Hi ha dos possibles revinguts, el baix i l'alt, en funció de la temperatura a la que es dugui a terme el tractament. El revingut baix (180-220ºC) només s'aplica en tremps per enduriment superficial, ja que manté una elevada duresa però baixa tenacitat. El revingut alt (450-650ºC), que és el que s'ha aplicat a la pràctica, augmenta la tenacitat en detriment de la duresa i la resistència. La microestructura final està composta per grans de cementita (duresa $\approx$ 700HB) en una matriu ferrítica (duresa $\approx$ 80HB).
+
+\section{Normalitzat}
+El normalitzat és un tractament tèrmic que té per objectiu eliminar les tensions internes i homogeneïtzar l’estructura de les peces a les quals s’aplica. Consisteix en l’escalfament a una temperatura per sobre la d’austenització (en el cas de la pràctica, 860ºC) amb un temps de manteniment relativament llarg (30min-1h per polzada de gruix),  per tal que tota la peça assoleixi la mateixa temperatura i no es generin diferències microestructurals; i finalment un refredament lent (a l’aire). És un tractament que sol ser previ al tremp, amb l’objectiu de que el material recuperi les seves condicions ``normals" que es poden haver vist modificades degut a processos previs de mecanitzat; per exemple, el treball en fred. Aquest procés genera acritud en el material, augmenta la duresa i la fragilitat, de manera que si es pretén aplicar un tremp és convenient disminuir prèviament les tensions internes generades i homogeneïtzar la microestructura. 
+
+\section{Discussió dels resultats}
+Les provetes es poden ordenar de la següent manera veient els resultats en duresa i resiliència obtinguts en els assaigs:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lr}
+		\textbf{Duresa} & Tremp > Revingut > Normalitzat \\
+		\textbf{Resiliència} & Revingut > Normalitzat > Tremp
+	\end{tabular}
+\end{table}
+
+Pel que fa a la duresa, s’observa que els resultats són coherents en relació a les microestructures generades per cada tractament. La proveta trempada presenta el valor més elevat de duresa ja que, com s’ha dit, la martensita és una estructura molt tensionada i això li aporta una elevada duresa i fragilitat. Cal comentar que la duresa de la martensita està entre 50 i 70 HRC i que el resultat obtingut és lleugerament inferior a aquest rang. Això es pot deure a que el temps entre treure la proveta del forn i submergir-la en aigua va ser més llarg del que seria idoni. En quant a les provetes sotmeses a revingut i normalitzat, en no contenir martensita, presenten valors inferiors de duresa. Pel que fa a la proveta revinguda, en tant que prové d’una estructura martensítica, té una duresa superior a la normalitzada.
+
+Pel que fa a la resiliència, s’observa que el tremp en presenta un valor nul ja que es tracta d’una estructura mol fràgil i tensionada i, per tant, no pot emmagatzemar pràcticament energia de deformació elàstica. Tot i que la proveta revinguda prové d’una estructura martensítica i això pot dur a pensar que hauria de ser menys resilient que la normalitzada, cal tenir en compte que al tornar a ser escalfada fins a 600ºC, alhora que els valors de la duresa i resistència disminueixen, la tenacitat augmenta notablement (la tenacitat està molt correlacionada amb la resiliència, ja que es tracta de l’energia que és capaç d’emmagatzemar el material abans de trencar). És per aquest motiu que el normalitzat, que només consisteix en un refredament lent, presenta un valor de resiliència inferior al revingut.
+
+Les superfícies de ruptura de les tres provetes (\autoref{fig:tract-ruptures}) confirmen aquestes conclusions.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/tractaments/ruptures}
+	\caption{Superfícies de ruptura de les provetes. D'esquerra a dreta: tremp, normalitzat i revingut}
+	\label{fig:tract-ruptures}
+\end{figure}
+
+S’observa que la superfície de ruptura de la proveta trempada és llisa i neta, característica dels materials fràgils. Pel que fa a la revinguda, presenta uns llavis majors que la normalitzada, ja que aquesta és menys tenaç (la tenacitat sol ser un indicador de ductilitat).
 
 \end{document}
