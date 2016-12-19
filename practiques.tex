@@ -217,10 +217,22 @@ La primera columna correspon a la distància fins la cara trempada de la proveta
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis}
-			
+		\begin{axis}[
+				grid = both,
+				grid style = { line width = .1pt, draw = gray!10 },
+				major grid style = {line width = .2pt, draw = gray!50 },
+				width = 0.8\textwidth, height = 0.7\textwidth,
+				xtick = {}, ytick = {},
+				xlabel = Distància (mm),
+				ylabel = Duresa VR,
+				minor y tick num = 4,
+				minor x tick num = 3,
+				axis on top
+			]
+			\addplot+[smooth] table[x=D,y=H] {data/jominy/duresa.csv};
 		\end{axis}
 	\end{tikzpicture}
+	\caption{Duresa mesurada a la peça en funció de la distància}
 \end{figure}
 
 \end{document}
