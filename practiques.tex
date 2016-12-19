@@ -7,6 +7,11 @@
 \usepackage[hidelinks]{hyperref}	% Autoref support
 \usepackage{setspace}				% Allows to set a specific stretch
 \usepackage{float}
+\usepackage{gensymb}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 \addto\captionscatalan{\renewcommand{\chaptername}{Pràctica}}
 
@@ -165,5 +170,57 @@ Les superfícies de ruptura de les tres provetes (\autoref{fig:tract-ruptures}) 
 \end{figure}
 
 S’observa que la superfície de ruptura de la proveta trempada és llisa i neta, característica dels materials fràgils. Pel que fa a la revinguda, presenta uns llavis majors que la normalitzada, ja que aquesta és menys tenaç (la tenacitat sol ser un indicador de ductilitat).
+
+\chapter{Trempabilitat (assaig Jominy)}
+L’objectiu d’aquesta pràctica és determinar la corba de trempabilitat d’un acer F-1140, de la mateixa composició que l’acer utilitzat en la Pràctica 2: 0.45\% C, 0.65\% Mn, 0.25\% Si, 0.03\% P i 0.03\% S. Aquesta proporció dels elements aliants de l’acer afectarà significativament a la seva trempabilitat.
+
+La trempabilitat d’un acer indica la seva predisposició a deixar-se penetrar pel tremp, i es mesura mitjançant el gradient de dureses que hi ha des de la superfície d’una peça fins al seu nucli. En aquesta pràctica es realitza l’assaig Jominy, que és el mètode més utilitzat per definir i mesurar la trempabilitat dels acers. L’assaig consisteix en escalfar una proveta cilíndrica de $25 mm$ de diàmetre i $100 mm$ de longitud fins a la temperatura d’austenització: $860 \degree C$. Tot seguit es realitza el tremp a la cara inferior de la proveta refredant-la amb un raig d’aigua vertical. La cara trempada de la proveta representa la superfície de la peça i la cara oposada en representa el nucli. 
+
+\section{Evolució de la duresa en funció de la distància a la base trempada}
+Es mesuren les dureses en diferents punts al llarg de la generatriu del cilindre mitjançant el duròmetre Hoytom per tal d’obtenir la corba de trempabilitat de l’acer. Per a cada distància de la base trempada es realitzen dues mesures i se'n fa la mitjana. Les mesures més properes a la cara trempada es realitzen amb la punta de con diamant (HRC) per tal de no malmetre la punta de bola en cas que l’acer sigui més dur que aquesta. Posteriorment, quan la duresa ja ha disminuït una mica, es canvia la punta de diamant per la de bola $1/16"$ (HRB). Els valors tabulats indiquen que amb la punta de diamant el duròmetre Hoytom s’ha d’ajustar a una càrrega de 150 kp (aproximadament $1471 N$) i en el cas de la bola $1/16"$ la càrrega s’ha d’ajustar a $100 kp$ (aproximadament $981 N$). S’obtenen els valors següents de dureses Rockwell, els quals es converteixen mitjançant els valors tabulats a duresa Vickers per tal de poder-los comparar:
+
+\begin{longtable}{|r|rrr|r|}
+	\hline
+	\multirow{2}{*}{\textbf{Distancia (mm)}} & \multicolumn{3}{c|}{Duresa Rockwell (HR)} & \multirow{2}{*}{Duresa Vickers (HV)} \\
+	\cline{2-4}
+	& Mesura 1 & Mesura 2 & Mitjana &  \\
+	\hline
+	\textbf{1,5} & 47 & 43 & 45 & 446 \\
+	\textbf{3} & 44 & 46 & 45 & 446 \\
+	\textbf{5} & 48 & 42 & 45 & 445 \\
+	\textbf{7} & 43 & 47 & 45 & 443 \\
+	\textbf{9} & 45 & 44 & 44,5 & 439 \\
+	\textbf{11} & 46 & 42 & 44 & 434 \\
+	\textbf{13} & 41 & 46 & 43,5 & 430 \\
+	\textbf{15} & 42 & 44 & 43 & 423 \\
+	\textbf{20} & 38 & 43 & 40,5 & 396 \\
+	\textbf{25} & 39 & 33 & 36 & 355 \\
+	\textbf{30} & 28 & 29 & 28,5 & 290 \\
+	\textbf{35} & 100 & 96 & 98 & 240 \\
+	\textbf{40} & 89 & 90 & 89,5 & 190 \\
+	\textbf{45} & 88 & 84 & 86 & 175 \\
+	\textbf{50} & 86 & 84 & 85 & 170 \\
+	\textbf{55} & 83 & 83 & 83 & 165 \\
+	\textbf{60} & 84 & 81 & 82,5 & 163 \\
+	\textbf{65} & 82 & 81 & 81,5 & 160 \\
+	\textbf{70} & 81 & 84 & 82,5 & 163 \\
+	\textbf{75} & 79 & 81 & 80 & 155 \\
+	\textbf{80} & 80 & 81 & 80,5 & 156 \\
+	\textbf{85} & 80 & 79 & 79,5 & 153 \\
+	\hline
+	\caption{Valors obtinguts durant l'assaig de duresa}
+\end{longtable}
+
+La primera columna correspon a la distància fins la cara trempada de la proveta. Com es pot observar, els 11 primers valors s’han mesurat en l’escala HRC i la resta en l’escala HRB. S’ha acabat l’assaig en el moment que s’ha observat clarament la tendència constant de la duresa de la proveta (aproximadament a partir dels 5 cm de distància fins la base trempada. Es representa tot seguit la corba de trempabilitat de l’acer F-1140:
+
+% M'he quedat aqui!!!!!!!!!!!!!!
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}
+			
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
 
 \end{document}
