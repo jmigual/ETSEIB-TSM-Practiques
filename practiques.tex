@@ -54,7 +54,7 @@
 
 \chapter{Assaig a tracció}
 
-\section{Proveta metà\l. lica }
+\section{Proveta metà\l.lica }
 
 La \autoref{fig:traccio-metalica-grafic-proveta} correspon al resultat de l'assaig a tracció de la proveta metà\l.lica de 6 mm de diàmetre inicial, marcada amb separacions de 10 mm per estimar posteriorment paràmetres de ruptura. 
 
@@ -65,7 +65,7 @@ La \autoref{fig:traccio-metalica-grafic-proveta} correspon al resultat de l'assa
     \label{fig:traccio-metalica-grafic-proveta}
 \end{figure}
 
-Abans de concretar algunes qüestions sobre l'assaig, a priori ja es poden extreure algunes conclusions del únicament utilitzant el gràfic:
+Abans de concretar algunes qüestions sobre l'assaig, a priori ja es poden extreure algunes conclusions únicament utilitzant el gràfic:
 \begin{itemize}
     \item  S'ha produït la ruptura del material. Això ho poden notar amb la línia vertical final en el gràfic.
     \item  La peça ha relliscat al principi, com queda indicat a la línia horitzontal inicial del gràfic. Aquest fenomen retarda l'aparició de la zona elàstica del material, caracteritzada per una zona de pendent constant, que es troba aproximadament entre els 4 mm i els 6,11 mm de desplaçament dels capçals de la màquina.
@@ -111,6 +111,86 @@ Quant a l'allargament a la ruptura, la distància entre les marques entre les qu
 
 Per últim, el diàmetre final de la proveta, mesurada amb una precisió de $0,1 \ mm$ és de $5 \ mm$, per tant, l'estricció és d'un $30,56\%$.
 
+\section{Provetes polimèriques}
+\subsection{Descripció de les fractures}
+El polipropilé (PP) ha tingut una fractura fràgil, es a dir les superfícies de ruptures han estat planes i llises com es mostra a la \autoref{fig:traccio-polimeric-fragil}. En canvi el poliestirè (PS) ha patit una fractura dúctil i les seves superfícies han quedat rugoses com s'i\l.lustra a la \autoref{fig:traccio-polimeric-ductil}.
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\includegraphics[height=0.5\textwidth]{images/traccio/polimeric-fragil}
+		\caption{Ruptura fràgil}
+		\label{fig:traccio-polimeric-fragil}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\includegraphics[height=0.5\textwidth]{images/traccio/polimeric-ductil}
+		\caption{Ruptura dúctil}
+		\label{fig:traccio-polimeric-ductil}
+	\end{minipage}
+\end{figure}
+
+\subsection{Determinació del límit elàstic i la càrrega màxima}
+
+Com és pot observar a la \autoref{fig:traccio-polimeric-PP}, el PP es comporta sempre de forma elàstica fins la ruptura, així doncs el seu limit elàstic coincideix amb la tensió de ruptura que es de 2 kN.
+
+Per determinar el limit elàstic del PS hem buscat la tensió per la qual el material te una deformació plàstica d’un $0,2 \%$. Com que la mida de les provetes es de $100\ mm$, això es produirà quan hi hagi una deformació plàstica de $2\ mm$. Així doncs el limit elàstic es produeix als $1,4\ kN$. 
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\includegraphics[height=0.6\textwidth]{images/traccio/polimeric-PP}
+		\caption{Assaig del PP}
+		\label{fig:traccio-polimeric-PP}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\includegraphics[height=0.6\textwidth]{images/traccio/polimeric-PS}
+		\caption{Determinació límit elàstic PS}
+		\label{fig:traccio-polimeric-PS}
+\end{minipage}
+\end{figure}
+
+Aquestes forces corresponen a una tensió de $2\ GPa$ i $1,4\ GPa$ respectivament un cop dividim per l’àrea de la secció de la proveta.
+
+La carrega màxima del PP es de $2\ kN$ i la del PS de $1,5\ kN$.
+
+\subsection{Determinació de l'allargament a ruptura}
+Pel que fa el PP no s’han observat allargaments significatius. També s'ha pogut veure com la proveta recuperava l'allargament després del trencament ja que la longitud final era gairebé la mateixa que la longitud abans de realitzar l'assaig.
+
+Pel que fa el PS s'ha finalitzat l’experiment augmentant la velocitat per comprovar el fenomen de creeping o fluència. Aquest consisteix en augmentar la velocitat de deformació, fent que les cadenes no tinguin temps a orientar-se i el polímer trenca. Fins aleshores la proveta havia registrat un allargament d’un 21\%.
+
+\subsection{Anàlisis de resultats}
+El PP es trobava en un estat crista\l.lí,  ja que la temperatura ambient era superior a la temperatura de crista\l.lització, això no permet a les cadenes orientar-se. Això impedeix un comportament dúctil i la peça trenca de manera fràgil.
+
+En canvi amb el PS passa el contrari ja que es troba en estat amorf. Gràcies això és capaç d’anar orientant les cadenes i comportar-se de manera dúctil a velocitats baixes.
+
+Pel que fa a la tenacitat, si es parteix de la definició següent on $\varepsilon_R$ és el límit de ruptura:
+$$
+T = \int_0^{\varepsilon_R} \sigma(\varepsilon) d\varepsilon
+$$
+
+En altres paraules, l’àrea les gràfiques del assaig són proporcionals a la tenacitat suposant una mateixa secció i longitud inicial.
+
+Es pot aproximar la del PP amb un triangle:
+$$
+T = k \cdot \frac{1}{2} \cdot 2\ kN = k \cdot 3,5
+$$ 
+
+La del PS com un rectangle:
+$$
+T = k \cdot 0,8\ kN \cdot 150\ mm = k \cdot 120
+$$
+
+i la d’acer per un triangle també:
+$$
+T = k \cdot 35\ kN \cdot 10\ mm \cdot \frac{1}{2} = k \cdot 175
+$$
+
+Per tant es pot concloure que l’acer és més tenaç que el PS (a velocitats baixes) i alhora aquest es més tenaç que el PP.
+
 \chapter{Tractaments tèrmics}
 
 L'objectiu d'aquesta pràctica és determinar l'efecte de tres tractaments tèrmics en les propietats d'un acer F-1140 (0,45\% C, 0,65\% Mn, 0,25\% Si, ≤0,03\% P, ≤0,03\% S). 
@@ -143,7 +223,7 @@ Tot i que el tremp proporciona una elevada duresa, el principal inconvenient és
 Hi ha dos possibles revinguts, el baix i l'alt, en funció de la temperatura a la que es dugui a terme el tractament. El revingut baix (180-220ºC) només s'aplica en tremps per enduriment superficial, ja que manté una elevada duresa però baixa tenacitat. El revingut alt (450-650ºC), que és el que s'ha aplicat a la pràctica, augmenta la tenacitat en detriment de la duresa i la resistència. La microestructura final està composta per grans de cementita (duresa $\approx$ 700HB) en una matriu ferrítica (duresa $\approx$ 80HB).
 
 \section{Normalitzat}
-El normalitzat és un tractament tèrmic que té per objectiu eliminar les tensions internes i homogeneïtzar l’estructura de les peces a les quals s’aplica. Consisteix en l’escalfament a una temperatura per sobre la d’austenització (en el cas de la pràctica, 860ºC) amb un temps de manteniment relativament llarg (30min-1h per polzada de gruix),  per tal que tota la peça assoleixi la mateixa temperatura i no es generin diferències microestructurals; i finalment un refredament lent (a l’aire). És un tractament que sol ser previ al tremp, amb l’objectiu de que el material recuperi les seves condicions ``normals" que es poden haver vist modificades degut a processos previs de mecanitzat; per exemple, el treball en fred. Aquest procés genera acritud en el material, augmenta la duresa i la fragilitat, de manera que si es pretén aplicar un tremp és convenient disminuir prèviament les tensions internes generades i homogeneïtzar la microestructura. 
+El normalitzat és un tractament tèrmic que té per objectiu eliminar les tensions internes i homogeneïtzar l'estructura de les peces a les quals s'aplica. Consisteix en l'escalfament a una temperatura per sobre la d'austenització (en el cas de la pràctica, 860ºC) amb un temps de manteniment relativament llarg (30min-1h per polzada de gruix),  per tal que tota la peça assoleixi la mateixa temperatura i no es generin diferències microestructurals; i finalment un refredament lent (a l'aire). És un tractament que sol ser previ al tremp, amb l'objectiu de que el material recuperi les seves condicions ``normals" que es poden haver vist modificades degut a processos previs de mecanitzat; per exemple, el treball en fred. Aquest procés genera acritud en el material, augmenta la duresa i la fragilitat, de manera que si es pretén aplicar un tremp és convenient disminuir prèviament les tensions internes generades i homogeneïtzar la microestructura. 
 
 \section{Discussió dels resultats}
 Les provetes es poden ordenar de la següent manera veient els resultats en duresa i resiliència obtinguts en els assaigs:
@@ -156,9 +236,9 @@ Les provetes es poden ordenar de la següent manera veient els resultats en dure
 	\end{tabular}
 \end{table}
 
-Pel que fa a la duresa, s’observa que els resultats són coherents en relació a les microestructures generades per cada tractament. La proveta trempada presenta el valor més elevat de duresa ja que, com s’ha dit, la martensita és una estructura molt tensionada i això li aporta una elevada duresa i fragilitat. Cal comentar que la duresa de la martensita està entre 50 i 70 HRC i que el resultat obtingut és lleugerament inferior a aquest rang. Això es pot deure a que el temps entre treure la proveta del forn i submergir-la en aigua va ser més llarg del que seria idoni. En quant a les provetes sotmeses a revingut i normalitzat, en no contenir martensita, presenten valors inferiors de duresa. Pel que fa a la proveta revinguda, en tant que prové d’una estructura martensítica, té una duresa superior a la normalitzada.
+Pel que fa a la duresa, s'observa que els resultats són coherents en relació a les microestructures generades per cada tractament. La proveta trempada presenta el valor més elevat de duresa ja que, com s'ha dit, la martensita és una estructura molt tensionada i això li aporta una elevada duresa i fragilitat. Cal comentar que la duresa de la martensita està entre 50 i 70 HRC i que el resultat obtingut és lleugerament inferior a aquest rang. Això es pot deure a que el temps entre treure la proveta del forn i submergir-la en aigua va ser més llarg del que seria idoni. En quant a les provetes sotmeses a revingut i normalitzat, en no contenir martensita, presenten valors inferiors de duresa. Pel que fa a la proveta revinguda, en tant que prové d'una estructura martensítica, té una duresa superior a la normalitzada.
 
-Pel que fa a la resiliència, s’observa que el tremp en presenta un valor nul ja que es tracta d’una estructura mol fràgil i tensionada i, per tant, no pot emmagatzemar pràcticament energia de deformació elàstica. Tot i que la proveta revinguda prové d’una estructura martensítica i això pot dur a pensar que hauria de ser menys resilient que la normalitzada, cal tenir en compte que al tornar a ser escalfada fins a 600ºC, alhora que els valors de la duresa i resistència disminueixen, la tenacitat augmenta notablement (la tenacitat està molt correlacionada amb la resiliència, ja que es tracta de l’energia que és capaç d’emmagatzemar el material abans de trencar). És per aquest motiu que el normalitzat, que només consisteix en un refredament lent, presenta un valor de resiliència inferior al revingut.
+Pel que fa a la resiliència, s'observa que el tremp en presenta un valor nul ja que es tracta d'una estructura mol fràgil i tensionada i, per tant, no pot emmagatzemar pràcticament energia de deformació elàstica. Tot i que la proveta revinguda prové d'una estructura martensítica i això pot dur a pensar que hauria de ser menys resilient que la normalitzada, cal tenir en compte que al tornar a ser escalfada fins a 600ºC, alhora que els valors de la duresa i resistència disminueixen, la tenacitat augmenta notablement (la tenacitat està molt correlacionada amb la resiliència, ja que es tracta de l'energia que és capaç d'emmagatzemar el material abans de trencar). És per aquest motiu que el normalitzat, que només consisteix en un refredament lent, presenta un valor de resiliència inferior al revingut.
 
 Les superfícies de ruptura de les tres provetes (\autoref{fig:tract-ruptures}) confirmen aquestes conclusions.
 
@@ -169,15 +249,15 @@ Les superfícies de ruptura de les tres provetes (\autoref{fig:tract-ruptures}) 
 	\label{fig:tract-ruptures}
 \end{figure}
 
-S’observa que la superfície de ruptura de la proveta trempada és llisa i neta, característica dels materials fràgils. Pel que fa a la revinguda, presenta uns llavis majors que la normalitzada, ja que aquesta és menys tenaç (la tenacitat sol ser un indicador de ductilitat).
+S'observa que la superfície de ruptura de la proveta trempada és llisa i neta, característica dels materials fràgils. Pel que fa a la revinguda, presenta uns llavis majors que la normalitzada, ja que aquesta és menys tenaç (la tenacitat sol ser un indicador de ductilitat).
 
 \chapter{Trempabilitat (assaig Jominy)}
-L’objectiu d’aquesta pràctica és determinar la corba de trempabilitat d’un acer F-1140, de la mateixa composició que l’acer utilitzat en la Pràctica 2: 0.45\% C, 0.65\% Mn, 0.25\% Si, 0.03\% P i 0.03\% S. Aquesta proporció dels elements aliants de l’acer afectarà significativament a la seva trempabilitat.
+L'objectiu d'aquesta pràctica és determinar la corba de trempabilitat d'un acer F-1140, de la mateixa composició que l'acer utilitzat en la Pràctica 2: 0.45\% C, 0.65\% Mn, 0.25\% Si, 0.03\% P i 0.03\% S. Aquesta proporció dels elements aliants de l'acer afectarà significativament a la seva trempabilitat.
 
-La trempabilitat d’un acer indica la seva predisposició a deixar-se penetrar pel tremp, i es mesura mitjançant el gradient de dureses que hi ha des de la superfície d’una peça fins al seu nucli. En aquesta pràctica es realitza l’assaig Jominy, que és el mètode més utilitzat per definir i mesurar la trempabilitat dels acers. L’assaig consisteix en escalfar una proveta cilíndrica de $25 mm$ de diàmetre i $100 mm$ de longitud fins a la temperatura d’austenització: $860 \degree C$. Tot seguit es realitza el tremp a la cara inferior de la proveta refredant-la amb un raig d’aigua vertical. La cara trempada de la proveta representa la superfície de la peça i la cara oposada en representa el nucli. 
+La trempabilitat d'un acer indica la seva predisposició a deixar-se penetrar pel tremp, i es mesura mitjançant el gradient de dureses que hi ha des de la superfície d'una peça fins al seu nucli. En aquesta pràctica es realitza l'assaig Jominy, que és el mètode més utilitzat per definir i mesurar la trempabilitat dels acers. L'assaig consisteix en escalfar una proveta cilíndrica de $25 mm$ de diàmetre i $100 mm$ de longitud fins a la temperatura d'austenització: $860 \degree C$. Tot seguit es realitza el tremp a la cara inferior de la proveta refredant-la amb un raig d'aigua vertical. La cara trempada de la proveta representa la superfície de la peça i la cara oposada en representa el nucli. 
 
 \section{Evolució de la duresa en funció de la distància a la base trempada}
-Es mesuren les dureses en diferents punts al llarg de la generatriu del cilindre mitjançant el duròmetre Hoytom per tal d’obtenir la corba de trempabilitat de l’acer. Per a cada distància de la base trempada es realitzen dues mesures i se'n fa la mitjana. Les mesures més properes a la cara trempada es realitzen amb la punta de con diamant (HRC) per tal de no malmetre la punta de bola en cas que l’acer sigui més dur que aquesta. Posteriorment, quan la duresa ja ha disminuït una mica, es canvia la punta de diamant per la de bola $1/16"$ (HRB). Els valors tabulats indiquen que amb la punta de diamant el duròmetre Hoytom s’ha d’ajustar a una càrrega de 150 kp (aproximadament $1471 N$) i en el cas de la bola $1/16"$ la càrrega s’ha d’ajustar a $100 kp$ (aproximadament $981 N$). S’obtenen els valors següents de dureses Rockwell, els quals es converteixen mitjançant els valors tabulats a duresa Vickers per tal de poder-los comparar:
+Es mesuren les dureses en diferents punts al llarg de la generatriu del cilindre mitjançant el duròmetre Hoytom per tal d'obtenir la corba de trempabilitat de l'acer. Per a cada distància de la base trempada es realitzen dues mesures i se'n fa la mitjana. Les mesures més properes a la cara trempada es realitzen amb la punta de con diamant (HRC) per tal de no malmetre la punta de bola en cas que l'acer sigui més dur que aquesta. Posteriorment, quan la duresa ja ha disminuït una mica, es canvia la punta de diamant per la de bola $1/16"$ (HRB). Els valors tabulats indiquen que amb la punta de diamant el duròmetre Hoytom s'ha d'ajustar a una càrrega de 150 kp (aproximadament $1471 N$) i en el cas de la bola $1/16"$ la càrrega s'ha d'ajustar a $100 kp$ (aproximadament $981 N$). S'obtenen els valors següents de dureses Rockwell, els quals es converteixen mitjançant els valors tabulats a duresa Vickers per tal de poder-los comparar:
 
 \begin{longtable}{|r|rrr|r|}
 	\hline
@@ -211,7 +291,7 @@ Es mesuren les dureses en diferents punts al llarg de la generatriu del cilindre
 	\caption{Valors obtinguts durant l'assaig de duresa}
 \end{longtable}
 
-La primera columna correspon a la distància fins la cara trempada de la proveta. Com es pot observar, els 11 primers valors s’han mesurat en l’escala HRC i la resta en l’escala HRB. S’ha acabat l’assaig en el moment que s’ha observat clarament la tendència constant de la duresa de la proveta (aproximadament a partir dels 5 cm de distància fins la base trempada. Es representa tot seguit la corba de trempabilitat de l’acer F-1140:
+La primera columna correspon a la distància fins la cara trempada de la proveta. Com es pot observar, els 11 primers valors s'han mesurat en l'escala HRC i la resta en l'escala HRB. S'ha acabat l'assaig en el moment que s'ha observat clarament la tendència constant de la duresa de la proveta (aproximadament a partir dels 5 cm de distància fins la base trempada. Es representa tot seguit la corba de trempabilitat de l'acer F-1140:
 
 % M'he quedat aqui!!!!!!!!!!!!!!
 \begin{figure}[H]
@@ -234,5 +314,31 @@ La primera columna correspon a la distància fins la cara trempada de la proveta
 	\end{tikzpicture}
 	\caption{Duresa mesurada a la peça en funció de la distància}
 \end{figure}
+
+Respecte a la corba de trempabilitat teòrica del ferro s'observa que la duresa màxima obtinguda és significativament inferior a la teòrica (aproximadament 58 HRC). El motiu d'això és que l'acer utilitzat no té la seva composició nominal, a causa de les nombroses vegades que la proveta ha estat utilitzada i de la difusió de carboni que té lloc quan la proveta s'està escalfant al forn. Aquesta difusió, tot i que  es minimitza situant la proveta en un suport i embolcall de grafit durant l'escalfament, provoca l'aparició de ferrita i per tant l'acer perd trempabilitat.
+
+\section{Determinació de la duresa interior de cilindres}
+Tot seguit es vol determinar la duresa superficial i interior de dos cilindres d'acer F-1140 de 50 mm de diàmetre suposant que se sotmeten a dos tremps amb diferent severitat: un en oli amb circulació moderada ($H=0.4$) i l'altre en aigua amb circulació forta ($H=2$). Amb aquest objectiu s'utilitzen les gràfiques de correspondència de duresa a l'interior de cilindres segons Weber i Wyn. Aquestes gràfiques permeten obtenir la distància a l'extrem trempat a partir del diàmetre de la proveta i la distància del punt interior a la superfície de la proveta. En aquest cas el diàmetre és de $50\ mm$ i, com que es tracta de provetes cilíndriques, la distància del centre a la superfície correspon al radi: $25\ mm$. Amb aquestes dues dades s'utilitzen els gràfics per trobar la distància a la base trempada:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/jominy/cilindres}
+\end{figure}
+
+Les distàncies obtingudes són $42\ mm$ en el cas del tremp en oli i $25\ mm$ en el tremp en aigua. Tot seguit s'utilitza la corba de trempabilitat per determinar les dureses corresponents a cada un dels tremps:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|rrr|}
+		\hline
+		Tremp & Distància a l'extrem (mm) & Duresa Vickers & Duresa Rockwell \\
+		\hline
+		Oli ($H=0.2$) & 42 & 187 & 89 (HRB) \\
+		Aigua ($H=4$) & 25 & 355 & 36 (HRC) \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Es comprova amb els valors obtinguts que com més sever és el tremp més elevada és la duresa a l'interior de la proveta.
 
 \end{document}
